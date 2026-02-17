@@ -1,7 +1,9 @@
 import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post } from '@nestjs/common';
+import { ApiExcludeController } from '@nestjs/swagger';
 import { LabService } from './lab.service';
 import { CreateLabDto } from './dto/create-lab.dto';
 
+@ApiExcludeController()
 @Controller('lab')
 export class LabController {
 
